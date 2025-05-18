@@ -6,10 +6,14 @@ $valid_username = 'jshergill';
 $valid_password = '123123';
 
 $username = $_REQUEST['username'];
+$_SESSION['username'] = $username;
+$currentDate = date("Y-m-d");
 $password = $_REQUEST['password'];
 
+
+
 if ($username == $valid_username && $password == $valid_password){
-    echo "Login successful";
+    header('Location:/');
 } else {
     
     if (!isset($_SESSION['Failed_attempts'])){
