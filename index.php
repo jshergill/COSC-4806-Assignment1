@@ -1,6 +1,8 @@
 <?php 
 session_start();
-    if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"] ==1) {
+ if (isset($_SESSION["authenticated"]) && $_SESSION["authenticated"] ==1) {
+      
+    } else{
     header("Location: login.php");}
 ?>
 
@@ -18,4 +20,6 @@ session_start();
     <p><a href="login.php">Click here to login</a></p>
 
   </body>
+ <footer> 
+    <p> <a href = "/logout.php">Click here to logout.</a></p>
 </html>
